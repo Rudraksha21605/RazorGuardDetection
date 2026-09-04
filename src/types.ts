@@ -1,0 +1,3 @@
+export type TransactionForm = { userId: string; amount: number | string; currency: string; ipAddress: string; cardFingerprint: string; };
+export type RiskRule = { code: string; label: string; contribution: number; detail: string; };
+export type RiskResponse = { userId: string; riskScore: number; recommendation: 'APPROVE' | 'CHALLENGE' | 'BLOCK'; reason: string; rules: RiskRule[]; liveTelemetry: { velocityLastMinute: number; distinctAccountsOnDevice: number; }; };
